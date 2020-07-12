@@ -100,6 +100,9 @@ export default AppRoot;
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
 
+## Example
+
+Checkout the example [here](https://github.com/Karthik-B-06/rn-segmented-control/tree/master/examples/RNSegmentedControl).
 
 ## Built with ❤️ 
 
