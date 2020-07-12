@@ -98,7 +98,7 @@ export default AppRoot;
 | activeTextColor                  | Color of Active Label Text                     | NO          | Color       | 'black'     |
 
 
-> Color accepts all [React Native Color Reference](https://reactnative.dev/docs/colors#color-representations).
+> Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
 
 
 ## Built with ❤️ 
