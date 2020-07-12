@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import SegmentedControl from 'rn-segmented-control';
 
-
 const AppRoot = () => {
   const handleTabPress = (index) => {
     // Function Callback with Tab index pressed
@@ -10,14 +9,19 @@ const AppRoot = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>Hello,World !</Text>
-      <Text style={styles.textStyle}> Segmented Control with 2 Control</Text>
+      <Text style={styles.textStyle}> Segmented Control with 2 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label']}
         onTabPress={() => { }}
       />
-      <Text style={styles.textStyle}> Segmented Control with 3 Control</Text>
+      <Text style={styles.textStyle}> Segmented Control with 3 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label']}
+        onTabPress={() => { }}
+      />
+      <Text style={styles.textStyle}> Segmented Control with 4 labels</Text>
+      <SegmentedControl
+        tabs={['Label', 'Label', 'Label', 'Label']}
         onTabPress={() => { }}
       />
       <Text style={styles.textStyle}>Customised Segmented Control</Text>
@@ -30,6 +34,7 @@ const AppRoot = () => {
         textColor='black'
         currentIndex={1}
       />
+
     </View>
   )
 }
@@ -45,7 +50,6 @@ const styles = StyleSheet.create({
   textStyle: {
     fontSize: 24,
     textAlign: 'center',
-    paddingHorizontal: 12,
     paddingVertical: 10
   }
 })
