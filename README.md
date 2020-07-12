@@ -106,7 +106,7 @@ Checkout the example [here](https://github.com/Karthik-B-06/rn-segmented-control
 
 ## Blog
 
-Have a look at my blog [here](https://medium.com/timeless/react-native-segmented-control-92508dcba97c)
+Have a look at my blog [here](https://medium.com/timeless/react-native-segmented-control-92508dcba97c).
 
 ## Built with ❤️ 
 
