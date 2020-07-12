@@ -5,6 +5,7 @@ import SegmentedControl from 'rn-segmented-control';
 const AppRoot = () => {
   const handleTabPress = (index) => {
     // Function Callback with Tab index pressed
+    console.log("Tab index", index)
   }
   return (
     <View style={styles.container}>
@@ -12,29 +13,28 @@ const AppRoot = () => {
       <Text style={styles.textStyle}> Segmented Control with 2 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label']}
-        onTabPress={() => { }}
+        onTabPress={handleTabPress}
       />
       <Text style={styles.textStyle}> Segmented Control with 3 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label']}
-        onTabPress={() => { }}
+        onTabPress={handleTabPress}
       />
       <Text style={styles.textStyle}> Segmented Control with 4 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label', 'Label']}
-        onTabPress={() => { }}
+        onTabPress={handleTabPress}
       />
       <Text style={styles.textStyle}>Customised Segmented Control</Text>
       <SegmentedControl
         tabs={['Shop', 'Discover', 'Brands']}
-        onTabPress={() => { }}
+        onTabPress={handleTabPress}
         segmentedControlBackgroundColor='#E5E5EA'
         activeSegmentBackgroundColor='white'
         activeTextColor='black'
         textColor='black'
         currentIndex={1}
       />
-
     </View>
   )
 }
