@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Karthik-B-06/rn-segmented-control"
+  },
   "keywords": [
     "react-native",
     "react-component",
@@ -19,6 +23,10 @@
   ],
   "author": "Karthik B",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Karthik-B-06/rn-segmented-control/issues"
+  },
+  "homepage": "https://github.com/Karthik-B-06/rn-segmented-control/blob/master/README.md",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.60.0"
   },
