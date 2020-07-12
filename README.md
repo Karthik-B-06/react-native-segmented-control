@@ -87,17 +87,34 @@ export default AppRoot;
 
 ## Props
 
+|   Name                           | Description                                    | Required    | Type        | Default     | 
+| ---------------------------------| ---------------------------------------------- | ----------- | ----------- | ----------- |
+| tabs                             | An array of labels for segments                | YES         | Array       | -           |
+| onTabPress                       | A callback Function with pressed segment index | YES         | Function    | -           |
+| currentIndex                     | Index of the currently active segment          | NO          | Number      | 0           |
+| activeSegmentBackgroundColor     | Background color of Active Label               | NO          | Color       | '#0482f7'   |
+| segmentedControlBackgroundColor  | Background color of the segment                | NO          | Color       | '#86c4fd'   |
+| textColor                        | Color of Label Text                            | NO          | Color       | 'white'     |
+| activeTextColor                  | Color of Active Label Text                     | NO          | Color       | 'black'     |
+
+
+> Color accepts all [React Native Color Reference](https://reactnative.dev/docs/colors#color-representations).
+
+
 ## Built with ❤️ 
 
 - [react-native](https://www.npmjs.com/package/react-native)
 - [lodash](https://lodash.com/)
 
+
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
+
 
 ## Author
 
 [Karthik B](https://twitter.com/_iam_karthik) 
+
 
 ## License
 
