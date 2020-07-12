@@ -116,7 +116,8 @@ Have a look at my blog [here](https://medium.com/timeless/react-native-segmented
 ## Todos
 
 - [ ] Customisable Text Styles
-- [ ] Work in Landscape mode
+- [ ] Make it work in Landscape mode
+- [ ] Custom Animation Spring Config
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
