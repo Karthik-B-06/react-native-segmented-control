@@ -1,0 +1,6 @@
+module Pods_RNSegmentedControl_RNSegmentedControlTests {
+  umbrella header "Pods-RNSegmentedControl-RNSegmentedControlTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

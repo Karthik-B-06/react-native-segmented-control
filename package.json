@@ -1,0 +1,28 @@
+{
+  "name": "rn-segmented-control",
+  "version": "0.1.1",
+  "description": "A simple and customizable React Native component to have a segmented control",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react native",
+    "mobile",
+    "ios",
+    "android",
+    "ui"
+  ],
+  "author": "Karthik B",
+  "license": "MIT",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.60.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.19"
+  }
+}
