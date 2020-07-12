@@ -113,6 +113,10 @@ Have a look at my blog [here](https://medium.com/timeless/react-native-segmented
 - [react-native](https://www.npmjs.com/package/react-native)
 - [lodash](https://lodash.com/)
 
+## Todos
+
+- [ ] Customisable Text Styles
+- [ ] Work in Landscape mode
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
