@@ -1,6 +1,6 @@
 {
   "name": "rn-segmented-control",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A simple and customizable React Native component to have a segmented control",
   "main": "index.js",
   "scripts": {
@@ -30,7 +30,5 @@
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.60.0"
   },
-  "dependencies": {
-    "lodash": "^4.17.19"
-  }
+  "dependencies": {}
 }

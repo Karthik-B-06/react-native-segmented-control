@@ -89,9 +89,9 @@ export default AppRoot;
 
 |   Name                           | Description                                    | Required    | Type        | Default     | 
 | ---------------------------------| ---------------------------------------------- | ----------- | ----------- | ----------- |
-| tabs                             | An array of labels for segments                | YES         | Array       | -           |
-| onTabPress                       | A callback Function with pressed segment index | YES         | Function    | -           |
-| currentIndex                     | Index of the currently active segment          | NO          | Number      | 0           |
+| tabs                             | An array of labels for segments                | YES         | Array       | []          |
+| onTabPress                       | A callback Function with pressed segment index | YES         | Function    | () => {}    |
+| currentIndex                     | Index for the currently active segment         | YES         | Number      | 0           |
 | activeSegmentBackgroundColor     | Background color of Active Label               | NO          | Color       | '#0482f7'   |
 | segmentedControlBackgroundColor  | Background color of the segment                | NO          | Color       | '#86c4fd'   |
 | textColor                        | Color of Label Text                            | NO          | Color       | 'white'     |
@@ -118,7 +118,6 @@ Have a look at my blog [here](https://medium.com/timeless/react-native-segmented
 - [ ] Customisable Text Styles
 - [ ] Make it work in Landscape mode
 - [ ] Custom Animation Spring Config
-- [ ] `handlePress` can be in a useCallback to prevent the closure from being created on every re-render. 
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
