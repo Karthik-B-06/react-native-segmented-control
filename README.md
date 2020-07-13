@@ -118,6 +118,7 @@ Have a look at my blog [here](https://medium.com/timeless/react-native-segmented
 - [ ] Customisable Text Styles
 - [ ] Make it work in Landscape mode
 - [ ] Custom Animation Spring Config
+- [ ] `handlePress` can be in a useCallback to prevent the closure from being created on every re-render. 
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
