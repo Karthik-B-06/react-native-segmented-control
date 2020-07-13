@@ -1,4 +1,3 @@
-import map from 'lodash/map';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Animated, Dimensions, StyleSheet, Text, TouchableOpacity } from 'react-native';
@@ -16,25 +15,32 @@ const shadow = {
   elevation: 4,
 }
 
-const width = Dimensions.get('window').width - 32;
+// So that it stretches in landscape mode.
+const width = Dimensions.get('screen').width - 32;
 
 const SegmentedControl = (props) => {
   const translateValue = ((width - 4) / props?.tabs?.length);
-  const [tabIndex, setTabIndex] = React.useState(props?.currentIndex);
   const [tabTranslate, setTabTranslate] = React.useState(new Animated.Value(0));
-  const handlePress = (index) => {
-    setTabIndex(index);
-    props?.onTabPress(index);
-  }
+
+  // useCallBack with an empty array as input, which will call inner lambda only once and memoize the reference for future calls
+  const memoizedTabPressCallback = React.useCallback(
+    (index) => {
+      props?.onTabPress(index);
+    },
+    []
+  );
+
   useEffect(() => {
+    // Animating the active index based current index
     Animated.spring(tabTranslate, {
-      toValue: tabIndex * translateValue,
+      toValue: props?.currentIndex * translateValue,
       stiffness: 180,
       damping: 20,
       mass: 1,
       useNativeDriver: true
     }).start()
-  }, [tabIndex])
+  }, [props?.currentIndex])
+
   return (
     <Animated.View style={[
       styles.segmentedControlWrapper,
@@ -64,13 +70,13 @@ const SegmentedControl = (props) => {
       >
       </Animated.View>
       {
-        map(props?.tabs, (tab, index) => {
-          const isCurrentIndex = tabIndex === index;
+        props?.tabs.map((tab, index) => {
+          const isCurrentIndex = props?.currentIndex === index;
           return (
             <TouchableOpacity
               key={index}
               style={[styles.textWrapper]}
-              onPress={() => handlePress(index)}
+              onPress={() => memoizedTabPressCallback(index)}
               activeOpacity={0.7} >
               <Text style={[styles.textStyles, { color: props?.textColor }, !isCurrentIndex && { color: props?.activeTextColor }]}>{tab}</Text>
             </TouchableOpacity>
@@ -106,15 +112,17 @@ const styles = StyleSheet.create({
 SegmentedControl.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onTabPress: PropTypes.func.isRequired,
-  currentIndex: PropTypes.number,
-  activeSegmentBackgroundColor: PropTypes.string,
+  currentIndex: PropTypes.number.isRequired,
   segmentedControlBackgroundColor: PropTypes.string,
+  activeSegmentBackgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   activeTextColor: PropTypes.string
 }
 
 
 SegmentedControl.defaultProps = {
+  tabs: [],
+  onTabPress: () => { },
   currentIndex: 0,
   segmentedControlBackgroundColor: '#86c4fd',
   activeSegmentBackgroundColor: '#0482f7',
