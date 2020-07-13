@@ -25,7 +25,7 @@ const SegmentedControl = (props) => {
   // useCallBack with an empty array as input, which will call inner lambda only once and memoize the reference for future calls
   const memoizedTabPressCallback = React.useCallback(
     (index) => {
-      props?.onTabPress(index);
+      props?.onChange(index);
     },
     []
   );
@@ -111,7 +111,7 @@ const styles = StyleSheet.create({
 
 SegmentedControl.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onTabPress: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
   currentIndex: PropTypes.number.isRequired,
   segmentedControlBackgroundColor: PropTypes.string,
   activeSegmentBackgroundColor: PropTypes.string,
@@ -122,7 +122,7 @@ SegmentedControl.propTypes = {
 
 SegmentedControl.defaultProps = {
   tabs: [],
-  onTabPress: () => { },
+  onChange: () => { },
   currentIndex: 0,
   segmentedControlBackgroundColor: '#86c4fd',
   activeSegmentBackgroundColor: '#0482f7',

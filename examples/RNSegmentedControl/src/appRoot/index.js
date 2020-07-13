@@ -13,24 +13,27 @@ const AppRoot = () => {
       <Text style={styles.textStyle}> Segmented Control with 2 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label']}
+        onChange={() => { }}
       />
       <Text style={styles.textStyle}> Segmented Control with 3 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label']}
+        onChange={() => { }}
       />
       <Text style={styles.textStyle}> Segmented Control with 4 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label', 'Label']}
+        onChange={() => { }}
       />
       <Text style={styles.textStyle}>Customised Segmented Control</Text>
       <SegmentedControl
         tabs={['Shop', 'Discover', 'Brands']}
-        onTabPress={handleTabsChange}
+        currentIndex={tabIndex}
+        onChange={handleTabsChange}
         segmentedControlBackgroundColor='#E5E5EA'
         activeSegmentBackgroundColor='white'
         activeTextColor='black'
         textColor='black'
-        currentIndex={tabIndex}
       />
     </View>
   )
