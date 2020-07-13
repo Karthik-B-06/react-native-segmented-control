@@ -1,7 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView } from 'react-native';
-// import SegmentedControl from 'rn-segmented-control';
-import SegmentedControl from '../components/segmentedControl';
+import { StyleSheet, Text, View } from 'react-native';
+import SegmentedControl from 'rn-segmented-control';
 
 const AppRoot = () => {
   const [tabIndex, setTabIndex] = React.useState(1);
