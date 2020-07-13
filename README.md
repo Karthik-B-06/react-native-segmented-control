@@ -89,8 +89,8 @@ export default AppRoot;
 
 |   Name                           | Description                                    | Required    | Type        | Default     | 
 | ---------------------------------| ---------------------------------------------- | ----------- | ----------- | ----------- |
-| tabs                             | An array of labels for segments                | YES         | Array       | -           |
-| onTabPress                       | A callback Function with pressed segment index | YES         | Function    | -           |
+| tabs                             | An array of labels for segments                | YES         | Array       | []          |
+| onTabPress                       | A callback Function with pressed segment index | YES         | Function    | () => {}    |
 | currentIndex                     | Index for the currently active segment         | YES         | Number      | 0           |
 | activeSegmentBackgroundColor     | Background color of Active Label               | NO          | Color       | '#0482f7'   |
 | segmentedControlBackgroundColor  | Background color of the segment                | NO          | Color       | '#86c4fd'   |
