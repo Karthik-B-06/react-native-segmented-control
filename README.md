@@ -120,7 +120,6 @@ Have a look at my blog [here](https://medium.com/timeless/react-native-segmented
 ## Built with ❤️ 
 
 - [react-native](https://www.npmjs.com/package/react-native)
-- [lodash](https://lodash.com/)
 
 ## Todos
 
