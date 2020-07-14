@@ -92,10 +92,11 @@ export default AppRoot;
 | tabs                             | An array of labels for segments                | YES         | Array       | []          |
 | onChange                         | A callback Function with pressed segment index | YES         | Function    | () => {}    |
 | currentIndex                     | Index for the currently active segment         | YES         | Number      | 0           |
-| activeSegmentBackgroundColor     | Background color of Active Label               | NO          | Color       | '#0482f7'   |
-| segmentedControlBackgroundColor  | Background color of the segment                | NO          | Color       | '#86c4fd'   |
-| textColor                        | Color of Label Text                            | NO          | Color       | 'white'     |
+| activeSegmentBackgroundColor     | Background color of Active Label               | NO          | Color       | 'white'     |
+| segmentedControlBackgroundColor  | Background color of the segment                | NO          | Color       | '#E5E5EA'   |
+| textColor                        | Color of Label Text                            | NO          | Color       | 'black'     |
 | activeTextColor                  | Color of Active Label Text                     | NO          | Color       | 'black'     |
+| paddingVertical                  | A numeric value to manually adjust the height. | NO          | Number      | 12          |
 
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).

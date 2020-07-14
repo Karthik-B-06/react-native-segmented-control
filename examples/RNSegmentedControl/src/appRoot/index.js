@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import SegmentedControl from 'rn-segmented-control';
+// import SegmentedControl from 'rn-segmented-control';
+import SegmentedControl from '../components/segmentedControl';
 
 const AppRoot = () => {
   const [tabIndex, setTabIndex] = React.useState(1);
@@ -14,26 +15,30 @@ const AppRoot = () => {
       <SegmentedControl
         tabs={['Label', 'Label']}
         onChange={() => { }}
+        paddingVertical={8}
       />
       <Text style={styles.textStyle}> Segmented Control with 3 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label']}
         onChange={() => { }}
+        paddingVertical={10}
       />
       <Text style={styles.textStyle}> Segmented Control with 4 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label', 'Label']}
         onChange={() => { }}
+        paddingVertical={14}
       />
       <Text style={styles.textStyle}>Customised Segmented Control</Text>
       <SegmentedControl
         tabs={['Shop', 'Discover', 'Brands']}
         currentIndex={tabIndex}
         onChange={handleTabsChange}
-        segmentedControlBackgroundColor='#E5E5EA'
-        activeSegmentBackgroundColor='white'
-        activeTextColor='black'
+        segmentedControlBackgroundColor='#86c4fd'
+        activeSegmentBackgroundColor='#0482f7'
+        activeTextColor='white'
         textColor='black'
+        paddingVertical={16}
       />
     </View>
   )

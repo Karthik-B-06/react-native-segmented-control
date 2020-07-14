@@ -46,6 +46,9 @@ const SegmentedControl = (props) => {
       styles.segmentedControlWrapper,
       {
         backgroundColor: props?.segmentedControlBackgroundColor
+      },
+      {
+        paddingVertical: props?.paddingVertical,
       }
     ]}>
       <Animated.View
@@ -57,7 +60,7 @@ const SegmentedControl = (props) => {
           marginVertical: 2,
           marginHorizontal: 2,
           backgroundColor: props?.activeSegmentBackgroundColor,
-          borderRadius: 10,
+          borderRadius: 8,
           ...shadow,
         },
         {
@@ -78,7 +81,7 @@ const SegmentedControl = (props) => {
               style={[styles.textWrapper]}
               onPress={() => memoizedTabPressCallback(index)}
               activeOpacity={0.7} >
-              <Text style={[styles.textStyles, { color: props?.textColor }, !isCurrentIndex && { color: props?.activeTextColor }]}>{tab}</Text>
+              <Text numberOfLines={1} style={[styles.textStyles, { color: props?.textColor }, isCurrentIndex && { color: props?.activeTextColor }]}>{tab}</Text>
             </TouchableOpacity>
           )
         })
@@ -90,17 +93,17 @@ const SegmentedControl = (props) => {
 
 const styles = StyleSheet.create({
   segmentedControlWrapper: {
-    paddingVertical: 15,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    borderRadius: 10,
+    borderRadius: 8,
     width: width,
     marginVertical: 20
   },
   textWrapper: {
     flex: 1,
-    elevation: 9
+    elevation: 9,
+    paddingHorizontal: 5
   },
   textStyles: {
     fontSize: 18,
@@ -116,7 +119,8 @@ SegmentedControl.propTypes = {
   segmentedControlBackgroundColor: PropTypes.string,
   activeSegmentBackgroundColor: PropTypes.string,
   textColor: PropTypes.string,
-  activeTextColor: PropTypes.string
+  activeTextColor: PropTypes.string,
+  paddingVertical: PropTypes.number
 }
 
 
@@ -124,10 +128,11 @@ SegmentedControl.defaultProps = {
   tabs: [],
   onChange: () => { },
   currentIndex: 0,
-  segmentedControlBackgroundColor: '#86c4fd',
-  activeSegmentBackgroundColor: '#0482f7',
-  textColor: 'white',
-  activeTextColor: 'black'
+  segmentedControlBackgroundColor: '#E5E5EA',
+  activeSegmentBackgroundColor: 'white',
+  textColor: 'black',
+  activeTextColor: 'black',
+  paddingVertical: 12
 }
 
 export default SegmentedControl;
