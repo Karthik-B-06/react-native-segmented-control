@@ -36,30 +36,34 @@ const AppRoot = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.textStyle}>Hello,World !</Text>
-      <Text style={styles.textStyle}>Segmented Control with 2 labels</Text>
+      <Text style={styles.textStyle}> Segmented Control with 2 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label']}
         onChange={() => { }}
+        paddingVertical={6}
       />
-      <Text style={styles.textStyle}>Segmented Control with 3 labels</Text>
+      <Text style={styles.textStyle}> Segmented Control with 3 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label']}
         onChange={() => { }}
+        paddingVertical={10}
       />
-      <Text style={styles.textStyle}>Segmented Control with 4 labels</Text>
+      <Text style={styles.textStyle}> Segmented Control with 4 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label', 'Label']}
         onChange={() => { }}
+        paddingVertical={14}
       />
       <Text style={styles.textStyle}>Customised Segmented Control</Text>
       <SegmentedControl
         tabs={['Shop', 'Discover', 'Brands']}
         currentIndex={tabIndex}
         onChange={handleTabsChange}
-        segmentedControlBackgroundColor='#E5E5EA'
-        activeSegmentBackgroundColor='white'
-        activeTextColor='black'
+        segmentedControlBackgroundColor='#86c4fd'
+        activeSegmentBackgroundColor='#0482f7'
+        activeTextColor='white'
         textColor='black'
+        paddingVertical={18}
       />
     </View>
   )
