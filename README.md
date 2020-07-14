@@ -18,7 +18,7 @@ yarn add rn-segmented-control
 npm i rn-segmented-control
 ```
 
-> Also you need to have [lodash](https://lodash.com/) installed.
+> No extra dependencies and no linking required. Purely built on React Native APIs.
 
 ## Usage
 
