@@ -89,6 +89,10 @@ export default AppRoot;
 
 ```
 
+## Screenshot
+
+<img width="auto" height="350" src='/examples/RNSegmentedControl/assets/screenshotios.png' />
+
 ## Props
 
 |   Name                           | Description                                    | Required    | Type        | Default     | 
