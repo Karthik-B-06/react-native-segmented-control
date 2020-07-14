@@ -126,6 +126,7 @@ Have a look at my blog [here](https://medium.com/timeless/react-native-segmented
 - [ ] Customisable Text Styles
 - [ ] Make it work in Landscape mode
 - [ ] Custom Animation Spring Config
+- [ ] Add React Native Reanimated library for animations
 
 ## Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
