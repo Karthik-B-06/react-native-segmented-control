@@ -10,7 +10,7 @@
 
 ---
 
-## Installation
+## :anchor: Installation
 
 ```sh
 yarn add rn-segmented-control
@@ -18,14 +18,14 @@ yarn add rn-segmented-control
 npm i rn-segmented-control
 ```
 
-## Dependencies
+## :arrows_clockwise: Dependencies
 
 ```sh
 npm i prop-types
 ```
 
 
-## Usage
+## :mag: Usage
 
 ```js
 
@@ -94,11 +94,11 @@ export default AppRoot;
 
 ```
 
-## Screenshot
+## :camera: Screenshot
 
 <img width="auto" height="350" src='/examples/RNSegmentedControl/assets/screenshotios.png' />
 
-## Props
+## :wrench: Props
 
 |   Name                           | Description                                    | Required    | Type        | Default     | 
 | ---------------------------------| ---------------------------------------------- | ----------- | ----------- | ----------- |
@@ -114,35 +114,35 @@ export default AppRoot;
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
 
-## Example
+## :tada: Example
 
 Checkout the example [here](https://github.com/Karthik-B-06/rn-segmented-control/tree/master/examples/RNSegmentedControl).
 
-## Blog
+## :notebook: Blog
 
 Have a look at my blog [here](https://medium.com/timeless/react-native-segmented-control-92508dcba97c).
 
-## Built with ❤️ 
+## :snowman: Built with ❤️ 
 
 - [react-native](https://www.npmjs.com/package/react-native)
 
-## Todos
+## :white_check_mark: Todos
 
 - [ ] Customisable Text Styles
 - [ ] Make it work in Landscape mode
 - [ ] Custom Animation Spring Config
 - [ ] Add React Native Reanimated library for animations
 
-## Contributing
+## :v: Contributing
 Pull requests are always welcome! Feel free to open a new GitHub issue for any changes that can be made.
 
 
-## Author
+## :man: Author
 
 [Karthik B](https://twitter.com/_iam_karthik) 
 
 
-## License
+## :clipboard: License
 
 MIT
 
