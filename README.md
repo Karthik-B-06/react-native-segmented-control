@@ -18,7 +18,12 @@ yarn add rn-segmented-control
 npm i rn-segmented-control
 ```
 
-> No extra dependencies and no linking required. Purely built on React Native APIs.
+## Dependencies
+
+```sh
+npm i prop-types
+```
+
 
 ## Usage
 
