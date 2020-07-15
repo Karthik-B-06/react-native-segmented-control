@@ -30,5 +30,7 @@
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.60.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  }
 }
