@@ -45,11 +45,10 @@ const SegmentedControl = (props) => {
     <Animated.View style={[
       styles.segmentedControlWrapper,
       {
-        backgroundColor: props?.segmentedControlBackgroundColor
-      },
-      {
+        backgroundColor: props?.segmentedControlBackgroundColor,
         paddingVertical: props?.paddingVertical,
-      }
+      },
+        props?.containerStyle
     ]}>
       <Animated.View
         style={[{
@@ -81,7 +80,9 @@ const SegmentedControl = (props) => {
               style={[styles.textWrapper]}
               onPress={() => memoizedTabPressCallback(index)}
               activeOpacity={0.7} >
-              <Text numberOfLines={1} style={[styles.textStyles, { color: props?.textColor }, isCurrentIndex && { color: props?.activeTextColor }]}>{tab}</Text>
+              <Text numberOfLines={1} style={[styles.textStyles, { color: props?.textColor }, isCurrentIndex && { color: props?.activeTextColor }, props?.textStyle]}>
+                {tab}
+              </Text>
             </TouchableOpacity>
           )
         })
@@ -120,7 +121,9 @@ SegmentedControl.propTypes = {
   activeSegmentBackgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   activeTextColor: PropTypes.string,
-  paddingVertical: PropTypes.number
+  paddingVertical: PropTypes.number,
+  containerStyle: PropTypes.object,
+  textStyle: PropTypes.object,
 }
 
 
@@ -132,7 +135,9 @@ SegmentedControl.defaultProps = {
   activeSegmentBackgroundColor: 'white',
   textColor: 'black',
   activeTextColor: 'black',
-  paddingVertical: 12
+  paddingVertical: 12,
+  containerStyle: {},
+  textStyle: {}
 }
 
 export default SegmentedControl;

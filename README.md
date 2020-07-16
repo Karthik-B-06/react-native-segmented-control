@@ -110,6 +110,8 @@ export default AppRoot;
 | textColor                        | Color of Label Text                            | NO          | Color       | 'black'     |
 | activeTextColor                  | Color of Active Label Text                     | NO          | Color       | 'black'     |
 | paddingVertical                  | A numeric value to manually adjust the height. | NO          | Number      | 12          |
+| containerStyle                   | View style to shape the container of the tabs. | NO          | Number      | 12          |
+| textStyle                        | Text styles for both active and inactive tabs. | NO          | Number      | 12          |
 
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
