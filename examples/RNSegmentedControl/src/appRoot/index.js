@@ -1,6 +1,6 @@
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import SegmentedControl from '../components/segmentedControl';
+import SegmentedControl from 'rn-segmented-control';
 
 const AppRoot = () => {
   const [tabIndex, setTabIndex] = React.useState(1);
@@ -29,16 +29,20 @@ const AppRoot = () => {
         containerStyle={{
           marginVertical: 20,
         }}
-        width={Dimensions.get('screen').width - 230}
+        width={Dimensions.get('screen').width - 200}
       />
       <Text style={styles.textStyle}> Segmented Control with 4 labels</Text>
       <SegmentedControl
         tabs={['Label', 'Label', 'Label', 'Label']}
         onChange={() => { }}
         paddingVertical={14}
-        width={Dimensions.get('screen').width - 120}
+        width={Dimensions.get('screen').width - 90}
         containerStyle={{
           marginVertical: 20,
+        }}
+        textStyle={{
+          fontWeight: '300',
+          fontSize: 24
         }}
       />
       <Text style={styles.textStyle}>Customised Segmented Control</Text>
