@@ -42,6 +42,7 @@ const SegmentedControl = (props) => {
 
   return (
     <Animated.View style={[
+      props?.containerStyle,
       styles.segmentedControlWrapper,
       {
         width: width,
@@ -52,7 +53,6 @@ const SegmentedControl = (props) => {
       {
         paddingVertical: props?.paddingVertical,
       },
-      props?.containerStyle
     ]}>
       <Animated.View
         style={[{
@@ -84,12 +84,16 @@ const SegmentedControl = (props) => {
               style={[styles.textWrapper]}
               onPress={() => memoizedTabPressCallback(index)}
               activeOpacity={0.7} >
-              <Text numberOfLines={1} style={[
-                styles.textStyles,
-                { color: props?.textColor },
-                isCurrentIndex && { color: props?.activeTextColor },
-                props?.textStyle
-              ]}>{tab}</Text>
+              <Text
+                numberOfLines={1}
+                style={[
+                  styles.textStyles,
+                  props?.textStyle,
+                  { color: props?.textColor },
+                  isCurrentIndex && { color: props?.activeTextColor },
+                ]}>
+                {tab}
+              </Text>
             </TouchableOpacity>
           )
         })
