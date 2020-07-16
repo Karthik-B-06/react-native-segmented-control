@@ -117,13 +117,14 @@ export default AppRoot;
 
 ## :camera: Screenshot
 
-<div align="center">
+<div>
 <h2>iOS</h2>
 <img width="auto" height="350" src='/examples/RNSegmentedControl/assets/screenshotios.png' />
 
 <h2>Android</h2>
 <img width="auto" height="350" src='/examples/RNSegmentedControl/assets/screenshotandroid.png' />
-</div>
+</div>  
+
 
 ## :wrench: Props
 
