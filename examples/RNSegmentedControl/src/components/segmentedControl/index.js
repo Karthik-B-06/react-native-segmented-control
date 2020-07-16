@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { Animated, Dimensions, StyleSheet, Text, TouchableOpacity } from 'react-native';
+import { Animated, Dimensions, StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native';
 
 
 const shadow = {
@@ -15,10 +15,9 @@ const shadow = {
   elevation: 4,
 }
 
-// So that it stretches in landscape mode.
-const width = Dimensions.get('screen').width - 32;
 
 const SegmentedControl = (props) => {
+  const { width } = props;
   const translateValue = ((width - 4) / props?.tabs?.length);
   const [tabTranslate, setTabTranslate] = React.useState(new Animated.Value(0));
 
@@ -27,7 +26,7 @@ const SegmentedControl = (props) => {
     (index) => {
       props?.onChange(index);
     },
-    []
+    [props?.onChange]
   );
 
   useEffect(() => {
@@ -45,11 +44,15 @@ const SegmentedControl = (props) => {
     <Animated.View style={[
       styles.segmentedControlWrapper,
       {
+        width: width,
+      },
+      {
         backgroundColor: props?.segmentedControlBackgroundColor
       },
       {
         paddingVertical: props?.paddingVertical,
-      }
+      },
+      props?.containerStyle
     ]}>
       <Animated.View
         style={[{
@@ -81,12 +84,17 @@ const SegmentedControl = (props) => {
               style={[styles.textWrapper]}
               onPress={() => memoizedTabPressCallback(index)}
               activeOpacity={0.7} >
-              <Text numberOfLines={1} style={[styles.textStyles, { color: props?.textColor }, isCurrentIndex && { color: props?.activeTextColor }]}>{tab}</Text>
+              <Text numberOfLines={1} style={[
+                styles.textStyles,
+                { color: props?.textColor },
+                isCurrentIndex && { color: props?.activeTextColor },
+                props?.textStyle
+              ]}>{tab}</Text>
             </TouchableOpacity>
           )
         })
       }
-    </Animated.View >
+    </Animated.View>
   )
 }
 
@@ -97,8 +105,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: 8,
-    width: width,
-    marginVertical: 20
   },
   textWrapper: {
     flex: 1,
@@ -112,6 +118,7 @@ const styles = StyleSheet.create({
   }
 })
 
+
 SegmentedControl.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
   onChange: PropTypes.func.isRequired,
@@ -120,7 +127,10 @@ SegmentedControl.propTypes = {
   activeSegmentBackgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   activeTextColor: PropTypes.string,
-  paddingVertical: PropTypes.number
+  paddingVertical: PropTypes.number,
+  width: PropTypes.number,
+  containerStyle: ViewPropTypes.style,
+  textStyle: PropTypes.object
 }
 
 
@@ -132,7 +142,10 @@ SegmentedControl.defaultProps = {
   activeSegmentBackgroundColor: 'white',
   textColor: 'black',
   activeTextColor: 'black',
-  paddingVertical: 12
+  paddingVertical: 12,
+  width: Dimensions.get('screen').width - 32,
+  containerStyle: {},
+  textStyle: {}
 }
 
 export default SegmentedControl;
