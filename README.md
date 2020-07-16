@@ -121,13 +121,10 @@ export default AppRoot;
 
 ## :camera: Screenshot
 
-<div>
-<h2>iOS</h2>
-<img width="auto" height="350" src='/examples/RNSegmentedControl/assets/screenshotios.png' />
 
-<h2>Android</h2>
-<img width="auto" height="350" src='/examples/RNSegmentedControl/assets/screenshotandroid.png' />
-</div>  
+| iOS | Android |
+|-----|---------|
+|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotios.png' />|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotandroid.png' /> |
 
 
 ## :wrench: Props
