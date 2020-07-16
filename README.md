@@ -145,7 +145,9 @@ export default AppRoot;
 
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
+
 > `containerStyle` accepts all View styles and overrides the defaults
+
 > `textStyle` accepts all Text styles and overrides the defaults
 
 ## :tada: Example
