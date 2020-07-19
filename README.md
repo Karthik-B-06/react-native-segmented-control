@@ -142,6 +142,7 @@ export default AppRoot;
 | width                            | Sets the width of the segmented control        | NO          | Number               | Screen Specific Width|
 | containerStyle                   | Style object for the Segmented Control         | NO          | ViewPropTypes.style  | {}                   |
 | textStyle                        | Style object for the Labels                    | NO          | Text.style           | {}                   |
+| isRTL                            | Controls the toggle animation direction        | NO          | Bool                 | false                |
 
 
 

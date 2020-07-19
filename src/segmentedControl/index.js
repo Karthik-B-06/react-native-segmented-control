@@ -30,9 +30,12 @@ const SegmentedControl = (props) => {
   );
 
   useEffect(() => {
+    // If phone is set to RTL, make sure the animation does the correct transition.
+    const transitionMultiplier = props?.isRTL ? -1 : 1;
+
     // Animating the active index based current index
     Animated.spring(tabTranslate, {
-      toValue: props?.currentIndex * translateValue,
+      toValue: props?.currentIndex * (transitionMultiplier * translateValue),
       stiffness: 180,
       damping: 20,
       mass: 1,
@@ -134,7 +137,8 @@ SegmentedControl.propTypes = {
   paddingVertical: PropTypes.number,
   width: PropTypes.number,
   containerStyle: ViewPropTypes.style,
-  textStyle: PropTypes.object
+  textStyle: PropTypes.object,
+  isRTL: PropTypes.bool
 }
 
 
@@ -149,7 +153,8 @@ SegmentedControl.defaultProps = {
   paddingVertical: 12,
   width: Dimensions.get('screen').width - 32,
   containerStyle: {},
-  textStyle: {}
+  textStyle: {},
+  isRTL: false,
 }
 
 export default SegmentedControl;
