@@ -132,7 +132,7 @@ export default AppRoot;
 
 | iOS | Android | Dark Mode |
 |-----|---------|-----------|
-|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotios.png' />|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotandroid.png' /> |<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotiosdark.png' /> |
+|<img width="auto" height="500" src='./examples/RNSegmentedControl/assets/screenshotios.png' />|<img width="auto" height="500" src='./examples/RNSegmentedControl/assets/screenshotandroid.png' /> |<img width="auto" height="500" src='./examples/RNSegmentedControl/assets/screenshotiosdark.png' /> |
 
 
 ## :wrench: Props
