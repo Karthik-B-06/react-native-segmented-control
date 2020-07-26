@@ -14,7 +14,7 @@
     "prop-types": "^15.7.2",
     "react": "16.13.1",
     "react-native": "0.63.0",
-    "rn-segmented-control": "^0.2.1"
+    "rn-segmented-control": "^0.2.2-rc.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.4",
