@@ -2,6 +2,21 @@ import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { Animated, Dimensions, StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native';
 
+const getSegmentedBackgroundColor = (theme, colorValueFromProps) => {
+  return colorValueFromProps || (theme === 'LIGHT' ? '#E5E5EA' : '#4a5568');
+}
+
+const getSegmentedTextColor = (theme, colorValueFromProps) => {
+  return colorValueFromProps || (theme === 'LIGHT' ? 'black' : 'white');
+}
+
+const getActiveSegmentedBackgroundColor = (theme, colorValueFromProps) => {
+  return colorValueFromProps || (theme === 'LIGHT' ? 'white' : 'black');
+}
+
+const getActiveSegmentedTextColor = (theme, colorValueFromProps) => {
+  return colorValueFromProps || (theme === 'LIGHT' ? 'black' : 'white');
+}
 
 const shadow = {
   shadowColor: "#000",
@@ -36,7 +51,7 @@ const SegmentedControl = (props) => {
     // Animating the active index based current index
     Animated.spring(tabTranslate, {
       toValue: props?.currentIndex * (transitionMultiplier * translateValue),
-      stiffness: 180,
+      stiffness: 150,
       damping: 20,
       mass: 1,
       useNativeDriver: true
@@ -51,7 +66,7 @@ const SegmentedControl = (props) => {
         width: width,
       },
       {
-        backgroundColor: props?.segmentedControlBackgroundColor
+        backgroundColor: getSegmentedBackgroundColor(props?.theme, props?.segmentedControlBackgroundColor)
       },
       {
         paddingVertical: props?.paddingVertical,
@@ -65,7 +80,7 @@ const SegmentedControl = (props) => {
           top: 0,
           marginVertical: 2,
           marginHorizontal: 2,
-          backgroundColor: props?.activeSegmentBackgroundColor,
+          backgroundColor: getActiveSegmentedBackgroundColor(props?.theme, props?.activeSegmentBackgroundColor),
           borderRadius: 8,
           ...shadow,
         },
@@ -92,8 +107,11 @@ const SegmentedControl = (props) => {
                 style={[
                   styles.textStyles,
                   props?.textStyle,
-                  { color: props?.textColor },
-                  isCurrentIndex && { color: props?.activeTextColor },
+                  isCurrentIndex ? {
+                    color: getActiveSegmentedTextColor(props?.theme, props?.activeTextColor)
+                  } : {
+                      color: getSegmentedTextColor(props?.theme, props?.textColor)
+                    },
                 ]}>
                 {tab}
               </Text>
@@ -138,7 +156,8 @@ SegmentedControl.propTypes = {
   width: PropTypes.number,
   containerStyle: ViewPropTypes.style,
   textStyle: PropTypes.object,
-  isRTL: PropTypes.bool
+  isRTL: PropTypes.bool,
+  theme: PropTypes.oneOf(['LIGHT', 'DARK'])
 }
 
 
@@ -146,15 +165,16 @@ SegmentedControl.defaultProps = {
   tabs: [],
   onChange: () => { },
   currentIndex: 0,
-  segmentedControlBackgroundColor: '#E5E5EA',
-  activeSegmentBackgroundColor: 'white',
-  textColor: 'black',
-  activeTextColor: 'black',
+  segmentedControlBackgroundColor: null,
+  activeSegmentBackgroundColor: null,
+  textColor: null,
+  activeTextColor: null,
   paddingVertical: 12,
   width: Dimensions.get('screen').width - 32,
   containerStyle: {},
   textStyle: {},
   isRTL: false,
+  theme: 'LIGHT'
 }
 
 export default SegmentedControl;
