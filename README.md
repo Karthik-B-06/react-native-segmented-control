@@ -6,6 +6,8 @@
 
 <img width="auto" height="350" src="./examples/RNSegmentedControl/assets/segmentcontrolios.gif">
 
+<img width="auto" height="350" src="./examples/RNSegmentedControl/assets/segmentcontroliosdark.gif">
+
 </div>
 
 ---
