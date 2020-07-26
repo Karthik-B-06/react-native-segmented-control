@@ -130,9 +130,9 @@ export default AppRoot;
 ## :camera: Screenshot
 
 
-| iOS | Android |
-|-----|---------|
-|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotios.png' />|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotandroid.png' /> |
+| iOS | Android | Dark Mode |
+|-----|---------|-----------|
+|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotios.png' />|<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotandroid.png' /> |<img width="auto" height="650" src='./examples/RNSegmentedControl/assets/screenshotiosdark.png' /> |
 
 
 ## :wrench: Props
