@@ -33,7 +33,7 @@ npm i prop-types
 
 import React from 'react';
 import { Dimensions, StyleSheet, Text, View, Button } from 'react-native';
-import SegmentedControl from '../components/segmentedControl';
+import SegmentedControl from 'rn-segmented-control';
 
 const AppRoot = () => {
   const [tabIndex, setTabIndex] = React.useState(1);
