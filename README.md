@@ -147,6 +147,7 @@ export default AppRoot;
 | textColor                        | Color of Label Text                            | NO          | Color                | Set by theme         |
 | activeTextColor                  | Color of Active Label Text                     | NO          | Color                | Set by theme         |
 | activeTextWeight                 | Weight of Active Label Text                    | NO          | String               | null                 |
+| shadowStyle                      | Style for segment background                   | NO          | ShadowPropTypesIOS   | null                 |
 | paddingVertical                  | A numeric value to manually adjust the height. | NO          | Number               | 12                   |
 | width                            | Sets the width of the segmented control        | NO          | Number               | Screen Specific Width|
 | containerStyle                   | Style object for the Segmented Control         | NO          | ViewPropTypes.style  | {}                   |

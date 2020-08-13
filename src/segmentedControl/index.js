@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
-import { Animated, Dimensions, StyleSheet, Text, TouchableOpacity, ViewPropTypes } from 'react-native';
+import { Animated, Dimensions, StyleSheet, Text, TouchableOpacity, ViewPropTypes, ShadowPropTypesIOS } from 'react-native';
 
 const getSegmentedBackgroundColor = (theme, colorValueFromProps) => {
   return colorValueFromProps || (theme === 'LIGHT' ? '#E5E5EA' : '#4a5568');
@@ -18,7 +18,7 @@ const getActiveSegmentedTextColor = (theme, colorValueFromProps) => {
   return colorValueFromProps || (theme === 'LIGHT' ? 'black' : 'white');
 }
 
-const shadow = {
+const defaultShadow = {
   shadowColor: "#000",
   shadowOffset: {
     width: 0,
@@ -32,10 +32,10 @@ const shadow = {
 
 
 const SegmentedControl = (props) => {
-  const { width } = props;
+  const { width, shadowStyle } = props;
   const translateValue = ((width - 4) / props?.tabs?.length);
   const [tabTranslate, setTabTranslate] = React.useState(new Animated.Value(0));
-
+  const shadow = shadowStyle || defaultShadowStyle;
   // useCallBack with an empty array as input, which will call inner lambda only once and memoize the reference for future calls
   const memoizedTabPressCallback = React.useCallback(
     (index) => {
@@ -159,7 +159,8 @@ SegmentedControl.propTypes = {
   containerStyle: ViewPropTypes.style,
   textStyle: PropTypes.object,
   isRTL: PropTypes.bool,
-  theme: PropTypes.oneOf(['LIGHT', 'DARK'])
+  theme: PropTypes.oneOf(['LIGHT', 'DARK']),
+  shadowStyle: ShadowPropTypesIOS
 }
 
 
@@ -177,7 +178,8 @@ SegmentedControl.defaultProps = {
   containerStyle: {},
   textStyle: {},
   isRTL: false,
-  theme: 'LIGHT'
+  theme: 'LIGHT',
+  shadowStyle: null
 }
 
 export default SegmentedControl;
