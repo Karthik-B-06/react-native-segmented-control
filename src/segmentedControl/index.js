@@ -108,7 +108,8 @@ const SegmentedControl = (props) => {
                   styles.textStyles,
                   props?.textStyle,
                   isCurrentIndex ? {
-                    color: getActiveSegmentedTextColor(props?.theme, props?.activeTextColor)
+                    color: getActiveSegmentedTextColor(props?.theme, props?.activeTextColor),
+                    fontWeight: props?.activeTextWeight
                   } : {
                       color: getSegmentedTextColor(props?.theme, props?.textColor)
                     },
@@ -152,6 +153,7 @@ SegmentedControl.propTypes = {
   activeSegmentBackgroundColor: PropTypes.string,
   textColor: PropTypes.string,
   activeTextColor: PropTypes.string,
+  activeTextWeight: PropTypes.string,
   paddingVertical: PropTypes.number,
   width: PropTypes.number,
   containerStyle: ViewPropTypes.style,
@@ -169,6 +171,7 @@ SegmentedControl.defaultProps = {
   activeSegmentBackgroundColor: null,
   textColor: null,
   activeTextColor: null,
+  activeTextWeight: null,
   paddingVertical: 12,
   width: Dimensions.get('screen').width - 32,
   containerStyle: {},
