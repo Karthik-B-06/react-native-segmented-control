@@ -18,7 +18,7 @@ const getActiveSegmentedTextColor = (theme, colorValueFromProps) => {
   return colorValueFromProps || (theme === 'LIGHT' ? 'black' : 'white');
 }
 
-const defaultShadow = {
+const defaultShadowStyle = {
   shadowColor: "#000",
   shadowOffset: {
     width: 0,
