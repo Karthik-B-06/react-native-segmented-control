@@ -189,10 +189,11 @@ export default AppRoot;
 | textStyle                       | Style object for the Labels                    | NO       | Text.style           | {}                    |
 | isRTL                           | Controls the toggle animation direction        | NO       | Bool                 | false                 |
 | theme                           | App Theme                                      | NO       | oneOf['LIGHT','DARK] | 'LIGHT'               |
-| shadowStyle                     | Style for segment background                   | NO       | Object[1]            | null                  |
+| shadowStyle                     | Style for segment background                   | NO       | Object`[1]`          | null                  |
 
 ```js
-   [1]Shadow Style
+   [1]
+   Shadow Style
    PropTypes.shape({
     shadowColor: PropTypes.string,
     shadowOffset: PropTypes.shape({
@@ -202,7 +203,7 @@ export default AppRoot;
     shadowOpacity: PropTypes.number,
     shadowRadius: PropTypes.number,
     elevation: PropTypes.number,
-  }),
+  })
 ```
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
