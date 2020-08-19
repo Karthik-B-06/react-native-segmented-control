@@ -183,13 +183,27 @@ export default AppRoot;
 | textColor                       | Color of Label Text                            | NO       | Color                | Set by theme          |
 | activeTextColor                 | Color of Active Label Text                     | NO       | Color                | Set by theme          |
 | activeTextWeight                | Weight of Active Label Text                    | NO       | String               | 600                   |
-| shadowStyle                     | Style for segment background                   | NO       | ShadowPropTypesIOS   | null                  |
 | paddingVertical                 | A numeric value to manually adjust the height. | NO       | Number               | 12                    |
 | width                           | Sets the width of the segmented control        | NO       | Number               | Screen Specific Width |
 | containerStyle                  | Style object for the Segmented Control         | NO       | ViewPropTypes.style  | {}                    |
 | textStyle                       | Style object for the Labels                    | NO       | Text.style           | {}                    |
 | isRTL                           | Controls the toggle animation direction        | NO       | Bool                 | false                 |
 | theme                           | App Theme                                      | NO       | oneOf['LIGHT','DARK] | 'LIGHT'               |
+| shadowStyle                     | Style for segment background                   | NO       | Object[1]            | null                  |
+
+```js
+   [1]Shadow Style
+   PropTypes.shape({
+    shadowColor: PropTypes.string,
+    shadowOffset: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    shadowOpacity: PropTypes.number,
+    shadowRadius: PropTypes.number,
+    elevation: PropTypes.number,
+  }),
+```
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
 
