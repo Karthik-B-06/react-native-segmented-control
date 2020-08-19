@@ -7,7 +7,6 @@ import {
   Text,
   TouchableOpacity,
   ViewPropTypes,
-  ShadowPropTypesIOS,
 } from "react-native";
 
 const getSegmentedBackgroundColor = (theme, colorValueFromProps) => {
@@ -182,7 +181,16 @@ SegmentedControl.propTypes = {
   textStyle: PropTypes.object,
   isRTL: PropTypes.bool,
   theme: PropTypes.oneOf(["LIGHT", "DARK"]),
-  shadowStyle: ShadowPropTypesIOS,
+  shadowStyle: PropTypes.shape({
+    shadowColor: PropTypes.string,
+    shadowOffset: PropTypes.shape({
+      width: PropTypes.number,
+      height: PropTypes.number,
+    }),
+    shadowOpacity: PropTypes.number,
+    shadowRadius: PropTypes.number,
+    elevation: PropTypes.number,
+  }),
 };
 
 SegmentedControl.defaultProps = {
