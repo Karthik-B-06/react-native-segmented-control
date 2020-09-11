@@ -240,3 +240,13 @@ Pull requests are always welcome! Feel free to open a new GitHub issue for any c
 ## :clipboard: License
 
 MIT
+
+---
+
+<div align='center'>
+  <h4>   Like this project ?? </h4>
+<a href="https://www.buymeacoffee.com/karthik06" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" height="50" ></a>
+</div>
+
+---
+
