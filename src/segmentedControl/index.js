@@ -102,6 +102,7 @@ const SegmentedControl = (props) => {
             ),
             borderRadius: 8,
             ...shadow,
+            ...props?.tabStyle,
           },
           {
             transform: [
@@ -172,7 +173,8 @@ const styles = StyleSheet.create({
 
 SegmentedControl.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
-  customNames: PropTypes.arrayOf(PropTypes.string),
+  tabStyle: PropTypes.object,
+  customNames: PropTypes.object,
   onChange: PropTypes.func.isRequired,
   currentIndex: PropTypes.number.isRequired,
   segmentedControlBackgroundColor: PropTypes.string,
