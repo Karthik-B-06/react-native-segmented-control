@@ -200,6 +200,7 @@ SegmentedControl.propTypes = {
 
 SegmentedControl.defaultProps = {
   tabs: [],
+  customNames: null,
   onChange: () => {},
   currentIndex: 0,
   segmentedControlBackgroundColor: null,
