@@ -71,7 +71,6 @@ const SegmentedControl = (props) => {
   return (
     <Animated.View
       style={[
-        props?.containerStyle,
         styles.segmentedControlWrapper,
         {
           width: width,
@@ -85,6 +84,7 @@ const SegmentedControl = (props) => {
         {
           paddingVertical: props?.paddingVertical,
         },
+        props?.containerStyle,
       ]}
     >
       <Animated.View
