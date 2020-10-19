@@ -142,7 +142,7 @@ const SegmentedControl = (props) => {
                     },
               ]}
             >
-              {customNames ? customName(tab) : tab}
+              {props?.customNames ? customName(tab) : tab}
             </Text>
           </TouchableOpacity>
         );
