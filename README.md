@@ -4,9 +4,9 @@
   
 <h1>React Native Segmented Control</h1>
 
-<img width="auto" height="350" src="./examples/RNSegmentedControl/assets/segmentcontrolios.gif">
+<img width="auto" height="600" src="./examples/RNSegmentedControl/assets/segmentcontrolios.gif">
 
-<img width="auto" height="350" src="./examples/RNSegmentedControl/assets/segmentcontroliosdark.gif">
+<img width="auto" height="600" src="./examples/RNSegmentedControl/assets/segmentcontroliosdark.gif">
 
 </div>
 
