@@ -9,7 +9,8 @@
     "index.d.ts"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,8 @@
   },
   "homepage": "https://github.com/Karthik-B-06/rn-segmented-control/blob/master/README.md",
   "devDependencies": {
-    "metro-react-native-babel-preset": "^0.60.0"
+    "metro-react-native-babel-preset": "^0.60.0",
+    "standard-version": "^9.0.0"
   },
   "dependencies": {
     "@types/react-native": "^0.63.27",
