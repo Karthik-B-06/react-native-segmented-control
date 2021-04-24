@@ -26,6 +26,7 @@ declare module 'rn-segmented-control' {
     paddingVertical?: number;
     width?: number;
     containerStyle?: ViewStyle;
+    tileStyle?: ViewStyle;
     textStyle?: TextStyle;
     isRTL?: boolean;
     theme?: "LIGHT" | "DARK";
