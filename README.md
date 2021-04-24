@@ -186,6 +186,7 @@ export default AppRoot;
 | paddingVertical                 | A numeric value to manually adjust the height. | NO       | Number               | 12                    |
 | width                           | Sets the width of the segmented control        | NO       | Number               | Screen Specific Width |
 | containerStyle                  | Style object for the Segmented Control         | NO       | ViewPropTypes.style  | {}                    |
+| tileStyle                       | Style object for the absolute positioned tile  | NO       | ViewPropTypes.style  | {}                    |
 | textStyle                       | Style object for the Labels                    | NO       | Text.style           | {}                    |
 | isRTL                           | Controls the toggle animation direction        | NO       | Bool                 | false                 |
 | theme                           | App Theme                                      | NO       | oneOf['LIGHT','DARK] | 'LIGHT'               |
@@ -208,9 +209,11 @@ export default AppRoot;
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
 
-> `containerStyle` accepts all View styles and does not override the defaults provided by the package
+> `containerStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
 
 > `textStyle` accepts all Text styles and overrides the defaults except the label colors set by props
+
+> `tileStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
 
 ## :tada: Example
 
@@ -249,4 +252,3 @@ MIT
 </div>
 
 ---
-
