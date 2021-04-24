@@ -67,8 +67,8 @@ const SegmentedControl = (props) => {
   return (
     <Animated.View
       style={[
-        props?.containerStyle,
         styles.segmentedControlWrapper,
+        props?.containerStyle,
         {
           width: width,
         },
@@ -85,18 +85,17 @@ const SegmentedControl = (props) => {
     >
       <Animated.View
         style={[
+          styles.defaultTileStyle,
+          props?.tileStyle,
           {
             ...StyleSheet.absoluteFill,
             position: "absolute",
             width: (width - 4) / props?.tabs?.length,
             top: 0,
-            marginVertical: 2,
-            marginHorizontal: 2,
             backgroundColor: getActiveSegmentedBackgroundColor(
               props?.theme,
               props?.activeSegmentBackgroundColor
             ),
-            borderRadius: 8,
             ...shadow,
           },
           {
@@ -164,6 +163,11 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "600",
   },
+  defaultTileStyle: {
+    marginVertical: 2,
+    marginHorizontal: 2,
+    borderRadius: 8,
+  }
 });
 
 SegmentedControl.propTypes = {
@@ -191,6 +195,7 @@ SegmentedControl.propTypes = {
     shadowRadius: PropTypes.number,
     elevation: PropTypes.number,
   }),
+  tileStyle: ViewPropTypes.style,
 };
 
 SegmentedControl.defaultProps = {
@@ -209,6 +214,7 @@ SegmentedControl.defaultProps = {
   isRTL: false,
   theme: "LIGHT",
   shadowStyle: null,
+  tileStyle: {},
 };
 
 export default SegmentedControl;
