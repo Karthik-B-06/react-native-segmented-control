@@ -41,6 +41,10 @@ const AppRoot = () => {
         paddingVertical={6}
         containerStyle={{
           marginVertical: 20,
+          borderRadius: 15,
+        }}
+        tileStyle={{
+          borderRadius: 15,
         }}
         currentIndex={tabIndex}
         onChange={handleTabsChange}
