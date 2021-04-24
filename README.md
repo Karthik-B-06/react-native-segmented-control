@@ -209,11 +209,11 @@ export default AppRoot;
 
 > Color accepts all [React Native Colors](https://reactnative.dev/docs/colors#color-representations).
 
-> `containerStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
+> :warning: `containerStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
 
 > `textStyle` accepts all Text styles and overrides the defaults except the label colors set by props
 
-> `tileStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
+> :warning: `tileStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
 
 ## :tada: Example
 
