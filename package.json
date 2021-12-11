@@ -35,9 +35,7 @@
   "homepage": "https://github.com/Karthik-B-06/rn-segmented-control/blob/master/README.md",
   "devDependencies": {
     "metro-react-native-babel-preset": "^0.60.0",
-    "standard-version": "^9.0.0"
-  },
-  "dependencies": {
+    "standard-version": "^9.0.0",
     "@types/react-native": "^0.63.27",
     "prop-types": "^15.7.2",
     "typescript": "next"
