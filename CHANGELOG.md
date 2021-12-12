@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.9](https://github.com/Karthik-B-06/rn-segmented-control/compare/v0.2.8...v0.2.9) (2021-12-12)
+
+
+### Features
+
+* :memo: Updated README ([67106a2](https://github.com/Karthik-B-06/rn-segmented-control/commit/67106a28b27f3ec752b184c430f2167d1e059173))
+* :memo: Updated README with new prop desc ([aa8ad6d](https://github.com/Karthik-B-06/rn-segmented-control/commit/aa8ad6db121e69a12113f5fe3a96734d63372dcb))
+
 ### [0.2.8](https://github.com/Karthik-B-06/rn-segmented-control/compare/v0.2.7...v0.2.8) (2021-04-24)
 
 
