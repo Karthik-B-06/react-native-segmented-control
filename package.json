@@ -1,5 +1,5 @@
 {
-  "name": "react-native-segmented-control",
+  "name": "rn-segmented-control",
   "version": "1.0.0",
   "description": "A simple and customizable React Native component to have a segmented control",
   "main": "lib/commonjs/index.js",
