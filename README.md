@@ -8,12 +8,37 @@ React Native Segmented Control for both iOS and Android
 npm install react-native-segmented-control
 ```
 
+## :wrench: Props
+
+| Name                            | Description                                    | Required | Type                 | Default               |
+| ------------------------------- | ---------------------------------------------- | -------- | -------------------- | --------------------- |
+| segments                        | An array of labels for segments                | YES      | Array                | []                    |
+| currentIndex                    | Index for the currently active segment         | YES      | Number               | 0                     |
+| onChange                        | A callback Function with pressed segment index | YES      | Function             | () => {}              |
+| badgeCount                      | An array of badge value for segments.          | NO       | Array                | []                    |
+| isRTL                           | Controls the toggle animation direction        | NO       | Boolean              | false                 |
+| containerMargin                 | The value used to determine the width          | NO       | Number               | 16                    |
+| activeTextStyle                 | active text styles                             | NO       | TextStyle            | {}                    |
+| inactiveTextStyle               | inactive text styles.                          | NO       | ViewStyle            | {}                    |
+| segmentedControlWrapper         | Style object for the Segmented Control.        | NO       | ViewStyle.           | {}                    | 
+| pressableWrapper                | Style object for the Pressable Container       | NO       | ViewStyle.           | {}                    |  
+| tileStyle                       | Style object for the Absolute positioned tile  | NO       | ViewStyle            | {}                    |
+
+
+> :warning: `segmentedControlWrapper` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
+
+> :warning: `activeTextStyle` and `inactiveTextStyle` accepts all Text styles and overrides the defaults. Make sure you use it properly :)
+
+> :warning: `tileStyle` accepts all View styles and does override some default styles provided by the package. Make sure you use it properly :)
+
+> :information_source: To apply your own `shadowStyles` use the tileStyle prop 
+
+
+
 ## Usage
 
-```js
+```tsx
 import SegmentedControl from 'react-native-segmented-control';
-
-// ...
 
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
