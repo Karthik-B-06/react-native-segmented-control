@@ -11,9 +11,6 @@ React Native Segmented Control for both iOS, Android and Web 😎
 
 </div>
 
-
-
-
 ## :anchor: Installation
 
 ```sh
@@ -23,6 +20,10 @@ npm install rn-segmented-control
 ```sh
 yarn add rn-segmented-control
 ```
+
+## :arrows_counterclockwise: Dependencies
+
+Make sure you have [React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs) and [React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/) installed and configured. 
 
 ## :wrench: Props
 
