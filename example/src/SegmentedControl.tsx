@@ -154,7 +154,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               >
                 {segment}
               </Text>
-              {badgeCount[index] > 0 && (
+              {badgeCount[index] && (
                 <View
                   style={[
                     styles.defaultBadgeContainerStyle,
