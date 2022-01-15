@@ -2,7 +2,7 @@
 
 React Native Segmented Control for both iOS and Android
 
-## Installation
+## :anchor: Installation
 
 ```sh
 npm install react-native-segmented-control
@@ -35,7 +35,7 @@ npm install react-native-segmented-control
 
 
 
-## Usage
+## :mag: Usage
 
 ```tsx
 import SegmentedControl from 'react-native-segmented-control';
@@ -154,10 +154,14 @@ const styles = StyleSheet.create({
 });
 ```
 
-## Contributing
+## :v: Contributing
 
 See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
-## License
+## :man: Author
+
+[Karthik B](https://twitter.com/_iam_karthik)
+
+## :clipboard: License
 
 MIT
