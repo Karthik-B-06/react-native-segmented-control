@@ -18,7 +18,7 @@ interface SegmentedControlProps {
   segments: Array<string>;
   currentIndex: number;
   onChange: (index: number) => void;
-  badgeCount?: Array<number>;
+  badgeCount?: Array<number | null>;
   isRTL?: boolean;
   containerMargin?: number;
   activeTextStyle?: TextStyle;
