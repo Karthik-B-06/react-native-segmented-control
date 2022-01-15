@@ -5,7 +5,7 @@ React Native Segmented Control for both iOS and Android
 ## :anchor: Installation
 
 ```sh
-npm install react-native-segmented-control
+npm install rn-segmented-control
 ```
 
 ## :wrench: Props
@@ -38,7 +38,7 @@ npm install react-native-segmented-control
 ## :mag: Usage
 
 ```tsx
-import SegmentedControl from 'react-native-segmented-control';
+import SegmentedControl from 'rn-segmented-control';
 
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
