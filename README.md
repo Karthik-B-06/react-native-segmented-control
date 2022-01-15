@@ -1,14 +1,27 @@
-# react-native-segmented-control
+<div align="center">
+<h1>React Native Segmented Control</h1>
 
-React Native Segmented Control for both iOS, Android and Web
+  ![npm](https://badgen.net/badge/license/MIT/blue)
+  [![npm](https://badgen.net/npm/dt/react-native-segmented-control)](https://www.npmjs.com/package/rn-segmented-control)
+  [![npm](https://badgen.net/npm/v/react-native-segmented-control)](https://www.npmjs.com/package/rn-segmented-control)
+  [![](https://badgen.net/npm/types/tslib)](https://badgen.net/npm/types/tslib)
 
 ![SegmentedControl (1)](https://user-images.githubusercontent.com/35562287/149624807-88be6b2c-e9ee-4f1d-80d9-8b3711df0a70.gif)
+React Native Segmented Control for both iOS, Android and Web 😎
+
+</div>
+
+
 
 
 ## :anchor: Installation
 
 ```sh
 npm install rn-segmented-control
+```
+
+```sh
+yarn add rn-segmented-control
 ```
 
 ## :wrench: Props
