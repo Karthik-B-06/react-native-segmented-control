@@ -1,6 +1,9 @@
 # react-native-segmented-control
 
-React Native Segmented Control for both iOS and Android
+React Native Segmented Control for both iOS, Android and Web
+
+![SegmentedControl (1)](https://user-images.githubusercontent.com/35562287/149624807-88be6b2c-e9ee-4f1d-80d9-8b3711df0a70.gif)
+
 
 ## :anchor: Installation
 
@@ -153,6 +156,16 @@ const styles = StyleSheet.create({
   },
 });
 ```
+### Working Examples
+## :iphone: iOS and Android working Example.
+
+![SegmentedControl](https://user-images.githubusercontent.com/35562287/149624111-2b3d1f7f-a685-404a-a167-f7020706880d.gif)
+
+## :desktop_computer: Web
+
+![DesktopExample](https://user-images.githubusercontent.com/35562287/149624298-c415d1cc-5f65-4e44-8efb-02a9e0f96dbb.gif)
+
+
 
 ## :v: Contributing
 
