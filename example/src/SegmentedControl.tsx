@@ -77,13 +77,13 @@ interface SegmentedControlProps {
 const defaultShadowStyle = {
   shadowColor: '#000',
   shadowOffset: {
-    width: 0,
-    height: 2,
+    width: 1,
+    height: 1,
   },
-  shadowOpacity: 0.23,
-  shadowRadius: 2.62,
+  shadowOpacity: 0.025,
+  shadowRadius: 1,
 
-  elevation: 4,
+  elevation: 1,
 };
 
 const DEFAULT_SPRING_CONFIG = {
