@@ -106,17 +106,19 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
 
   const finalisedActiveBadgeStyle: ViewStyle = {
     backgroundColor: '#0ea5e9',
+    marginLeft: 4,
   };
 
   const finalisedInActiveBadgeStyle: ViewStyle = {
     backgroundColor: '#6b7280',
+    marginLeft: 4,
   };
 
   const finalisedBadgeTextStyle: TextStyle = {
     fontSize: 11,
     fontWeight: '500',
     textAlign: 'center',
-    color: '#FFFFF',
+    color: '#FFFFFF',
   };
 
   return (
