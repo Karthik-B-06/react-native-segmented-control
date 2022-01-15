@@ -1,0 +1,22 @@
+{
+  "name": "react-native-segmented-control-example",
+  "displayName": "SegmentedControl Example",
+  "expo": {
+    "name": "react-native-segmented-control-example",
+    "slug": "react-native-segmented-control-example",
+    "description": "Example app for react-native-segmented-control",
+    "privacy": "public",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
