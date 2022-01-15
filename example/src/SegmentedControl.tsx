@@ -15,17 +15,63 @@ import Animated, {
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 
 interface SegmentedControlProps {
+  /**
+   * The Segments Text Array
+   */
   segments: Array<string>;
+  /**
+   * The Current Active Segment Index
+   */
   currentIndex: number;
+  /**
+   * A callback onPress of a Segment
+   */
   onChange: (index: number) => void;
-  badgeCount?: Array<number | null>;
+  /**
+   * An array of Badge Values corresponding to the Segment
+   */
+  badgeValues?: Array<number | null>;
+  /**
+   * Is right-to-left mode.
+   */
   isRTL?: boolean;
+  /**
+   * The container margin for the segmented control
+   * Used to calculate the width of Segmented Control
+   */
   containerMargin?: number;
+  /**
+   * Active Segment Text Style
+   */
   activeTextStyle?: TextStyle;
+  /**
+   * InActive Segment Text Style
+   */
   inactiveTextStyle?: TextStyle;
+  /**
+   * Segment Container Styles
+   */
   segmentedControlWrapper?: ViewStyle;
+  /**
+   * Pressable Container Styles
+   */
   pressableWrapper?: ViewStyle;
+  /**
+   * The moving Tile Container Styles
+   */
   tileStyle?: ViewStyle;
+  /**
+   * Active Badge Styles
+   */
+  activeBadgeStyle?: ViewStyle;
+  /**
+   * Inactive Badge Styles
+   */
+  inactiveBadgeStyle?: ViewStyle;
+  /**
+   * Badge Text Styles
+   */
+  badgeTextStyle?: TextStyle;
 }
 
 const defaultShadowStyle = {
@@ -53,7 +99,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   segments,
   currentIndex,
   onChange,
-  badgeCount = [],
+  badgeValues = [],
   isRTL = false,
   containerMargin = 0,
   activeTextStyle,
@@ -61,6 +107,9 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   segmentedControlWrapper,
   pressableWrapper,
   tileStyle,
+  activeBadgeStyle,
+  inactiveBadgeStyle,
+  badgeTextStyle,
 }: SegmentedControlProps) => {
   const width = widthPercentageToDP('100%') - containerMargin * 2;
   const translateValue = width / segments.length;
@@ -91,27 +140,33 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
 
   const finalisedActiveTextStyle: TextStyle = {
     fontSize: 15,
-    fontWeight: '500',
+    fontWeight: '600',
     textAlign: 'center',
-    color: '#0ea5e9',
+    color: '#111827',
     ...activeTextStyle,
   };
 
   const finalisedInActiveTextStyle: TextStyle = {
     fontSize: 15,
     textAlign: 'center',
-    color: '#1f2937',
+    color: '#4b5563',
     ...inactiveTextStyle,
   };
 
   const finalisedActiveBadgeStyle: ViewStyle = {
-    backgroundColor: '#0ea5e9',
+    backgroundColor: '#27272a',
     marginLeft: 4,
+    alignItems: 'center',
+    justifyContent: 'center',
+    ...activeBadgeStyle,
   };
 
   const finalisedInActiveBadgeStyle: ViewStyle = {
     backgroundColor: '#6b7280',
     marginLeft: 4,
+    justifyContent: 'center',
+    alignItems: 'center',
+    ...inactiveBadgeStyle,
   };
 
   const finalisedBadgeTextStyle: TextStyle = {
@@ -119,6 +174,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     fontWeight: '500',
     textAlign: 'center',
     color: '#FFFFFF',
+    ...badgeTextStyle,
   };
 
   return (
@@ -154,7 +210,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               >
                 {segment}
               </Text>
-              {badgeCount[index] && (
+              {badgeValues[index] && (
                 <View
                   style={[
                     styles.defaultBadgeContainerStyle,
@@ -164,7 +220,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
                   ]}
                 >
                   <Text style={finalisedBadgeTextStyle}>
-                    {badgeCount[index]}
+                    {badgeValues[index]}
                   </Text>
                 </View>
               )}

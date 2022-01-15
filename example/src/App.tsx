@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
-import SegmentedControl from 'rn-segmented-control';
+import SegmentedControl from './SegmentedControl';
 
 export default function App() {
   const [tabIndex, setTabIndex] = React.useState(0);
@@ -19,6 +19,7 @@ export default function App() {
           segments={['Label 1', 'Label 2']}
           onChange={(index) => setTabIndex(index)}
           currentIndex={tabIndex}
+          badgeValues={[2, null, 1]}
         />
       </View>
       <View style={styles.box}>
@@ -69,7 +70,7 @@ export default function App() {
           activeTextStyle={styles.customBlueTextColor}
           inactiveTextStyle={styles.customWhiteColor}
           tileStyle={styles.customBlueColor}
-          badgeCount={[2]}
+          badgeValues={[2]}
         />
       </View>
       <View style={styles.box}>
@@ -78,7 +79,7 @@ export default function App() {
           segments={['Label 1', 'Label 2', 'Label 3']}
           onChange={(index) => setTabIndex6(index)}
           currentIndex={tabIndex6}
-          badgeCount={[2, null, 1]}
+          badgeValues={[2, null, 1]}
         />
       </View>
     </View>
