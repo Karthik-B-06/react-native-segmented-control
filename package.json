@@ -1,7 +1,7 @@
 {
   "name": "react-native-segmented-control",
-  "version": "0.1.0",
-  "description": "React Native Segmented Control for both iOS and Android",
+  "version": "1.0.0",
+  "description": "A simple and customizable React Native component to have a segmented control",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
@@ -33,8 +33,14 @@
   },
   "keywords": [
     "react-native",
+    "react-component",
+    "react-native-component",
+    "react",
+    "react native",
+    "mobile",
     "ios",
-    "android"
+    "android",
+    "ui"
   ],
   "repository": "https://github.com/Karthik-B-06/react-native-segmented-control",
   "author": "Karthik-B-06 <karthik06051996@gmail.com> (https://github.com/Karthik-B-06)",
