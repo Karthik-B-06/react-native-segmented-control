@@ -5,7 +5,7 @@ React Native Segmented Control for both iOS and Android
 ## :anchor: Installation
 
 ```sh
-npm install react-native-segmented-control
+npm install rn-segmented-control
 ```
 
 ## :wrench: Props
