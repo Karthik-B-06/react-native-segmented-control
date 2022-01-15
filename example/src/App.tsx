@@ -9,6 +9,7 @@ export default function App() {
   const [tabIndex3, setTabIndex3] = React.useState(0);
   const [tabIndex4, setTabIndex4] = React.useState(0);
   const [tabIndex5, setTabIndex5] = React.useState(0);
+  const [tabIndex6, setTabIndex6] = React.useState(0);
 
   return (
     <View style={styles.container}>
@@ -68,6 +69,16 @@ export default function App() {
           activeTextStyle={styles.customBlueTextColor}
           inactiveTextStyle={styles.customWhiteColor}
           tileStyle={styles.customBlueColor}
+          badgeCount={[2]}
+        />
+      </View>
+      <View style={styles.box}>
+        <SegmentedControl
+          containerMargin={16}
+          segments={['Label 1', 'Label 2', 'Label 3']}
+          onChange={(index) => setTabIndex6(index)}
+          currentIndex={tabIndex6}
+          badgeCount={[2, null, 1]}
         />
       </View>
     </View>
