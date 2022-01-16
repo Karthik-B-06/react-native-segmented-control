@@ -71,6 +71,7 @@ export default function App() {
           inactiveTextStyle={styles.customWhiteColor}
           tileStyle={styles.customBlueColor}
           badgeValues={[2]}
+          activeBadgeStyle={styles.customBadgeBlueColor}
         />
       </View>
       <View style={styles.box}>
@@ -109,5 +110,8 @@ const styles = StyleSheet.create({
   },
   customBlueTextColor: {
     color: '#0369a1',
+  },
+  customBadgeBlueColor: {
+    backgroundColor: '#38bdf8',
   },
 });
