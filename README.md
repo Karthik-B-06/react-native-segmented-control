@@ -6,7 +6,7 @@
 [![npm](https://badgen.net/npm/v/rn-segmented-control)](https://www.npmjs.com/package/rn-segmented-control)
 [![](https://badgen.net/npm/types/tslib)](https://badgen.net/npm/types/tslib)
 
-![SegmentedControl (1)](https://user-images.githubusercontent.com/35562287/149624807-88be6b2c-e9ee-4f1d-80d9-8b3711df0a70.gif)
+![SegmentedControl](https://user-images.githubusercontent.com/35562287/149650171-3cd9c972-6cf5-4aef-989f-199820d5b0e6.gif)
 React Native Segmented Control for both iOS, Android and Web 😎
 
 </div>
@@ -41,8 +41,8 @@ Make sure you have [React Native Reanimated](https://docs.swmansion.com/react-na
 | pressableWrapper        | Style object for the Pressable Container       | NO       | ViewStyle | {}       |
 | tileStyle               | Style object for the Absolute positioned tile  | NO       | ViewStyle | {}       |
 | activeBadgeStyle        | Active Badge Style                             | NO       | ViewStyle | {}       |
-| tileStyle               | Inactive Badge Style                           | NO       | ViewStyle | {}       |
-| tileStyle               | Badge text styles                              | NO       | TextStyle | {}       |
+| inactiveBadgeStyle      | Inactive Badge Style                           | NO       | ViewStyle | {}       |
+| badgeTextStyle          | Badge text styles                              | NO       | TextStyle | {}       |
 
 > :warning: all View styles or Text Styles passed as props overrides some default styles provided by the package. Make sure you use it properly :)
 
@@ -83,25 +83,12 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
     marginVertical: 16,
   },
-  customBlackColor: {
-    color: 'black',
-  },
-  customWhiteColor: {
-    color: 'white',
-  },
-  customGreenColor: {
-    color: '#3f6212',
-  },
-  customBlueColor: {
-    backgroundColor: '#e0f2fe',
-  },
-  customBlueTextColor: {
-    color: '#0369a1',
-  },
 });
 ```
 
 ### Working Examples
+
+Check the expo example app [here](https://github.com/Karthik-B-06/react-native-segmented-control/tree/main/example).
 
 ## :iphone: iOS and Android working Example.
 
