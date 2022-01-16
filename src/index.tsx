@@ -194,8 +194,12 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
         ]}
       />
       {segments.map((segment, index) => {
+        const accessibilityHint = currentIndex !== index ? `Selects ${segment} option` : ""
         return (
           <Pressable
+            accessibilityState={{ selected: currentIndex === index }}
+            accessibilityHint={accessibilityHint}
+            accessibilityLabel={`${segment} option ${index + 1} of ${segments.length}`}
             onPress={() => memoizedTabPressCallback(index)}
             key={index}
             style={[styles.touchableContainer, pressableWrapper]}
