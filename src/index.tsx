@@ -210,7 +210,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               >
                 {segment}
               </Text>
-              {badgeValues[index] && (
+              {typeof badgeValues[index] === 'number' && (
                 <View
                   style={[
                     styles.defaultBadgeContainerStyle,
