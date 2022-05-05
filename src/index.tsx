@@ -228,6 +228,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               segments.length
             }`}
             accessibilityRole="button"
+            {...accessibilityProps}
           >
             <View style={styles.textWrapper}>
               <Text
