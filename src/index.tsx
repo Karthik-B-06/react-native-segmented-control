@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
 import {
+  AccessibilityRole,
+  AccessibilityState,
+  AccessibilityValue,
   Pressable,
   StyleSheet,
   Text,
@@ -14,11 +17,20 @@ import Animated, {
 } from 'react-native-reanimated';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 
-interface SegmentedControlProps {
+export interface Segment {
+  label: string;
+  accessibilityLabel?: string;
+  accessibilityHint?: string;
+  accessibilityRole?: AccessibilityRole;
+  accessibilityState?: AccessibilityState;
+  accessibilityValue?: AccessibilityValue;
+}
+
+export interface SegmentedControlProps {
   /**
-   * The Segments Text Array
+   * An array of Segments. Can be a mix of strings for the Segment labels, or an object with a `label` and accessibility props.
    */
-  segments: Array<string>;
+  segments: Array<string | Segment>;
   /**
    * The Current Active Segment Index
    */
