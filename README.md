@@ -27,26 +27,29 @@ Make sure you have [React Native Reanimated](https://docs.swmansion.com/react-na
 
 ## :wrench: Props
 
-| Name                    | Description                                    | Required | Type      | Default  |
-| ----------------------- | ---------------------------------------------- | -------- | --------- | -------- |
-| segments                | An array of labels for segments                | YES      | Array     | []       |
-| currentIndex            | Index for the currently active segment         | YES      | Number    | 0        |
-| onChange                | A callback Function with pressed segment index | YES      | Function  | () => {} |
-| badgeValues             | An array of badge value for segments.          | NO       | Array     | []       |
-| isRTL                   | Controls the toggle animation direction        | NO       | Boolean   | false    |
-| containerMargin         | The value used to determine the width          | NO       | Number    | 16       |
-| activeTextStyle         | active text styles                             | NO       | TextStyle | {}       |
-| inactiveTextStyle       | inactive text styles.                          | NO       | TextStyle | {}       |
-| segmentedControlWrapper | Style object for the Segmented Control.        | NO       | ViewStyle | {}       |
-| pressableWrapper        | Style object for the Pressable Container       | NO       | ViewStyle | {}       |
-| tileStyle               | Style object for the Absolute positioned tile  | NO       | ViewStyle | {}       |
-| activeBadgeStyle        | Active Badge Style                             | NO       | ViewStyle | {}       |
-| inactiveBadgeStyle      | Inactive Badge Style                           | NO       | ViewStyle | {}       |
-| badgeTextStyle          | Badge text styles                              | NO       | TextStyle | {}       |
+| Name                    | Description                                    | Required | Type      | Default   |
+| ----------------------- | ---------------------------------------------- | -------- | --------- | --------  |
+| segments                | An array of labels for segments                | YES      | Array     | []        |
+| currentIndex            | Index for the currently active segment         | YES      | Number    | 0         |
+| onChange                | A callback Function with pressed segment index | YES      | Function  | () => {}  |
+| badgeValues             | An array of badge value for segments.          | NO       | Array     | []        |
+| isRTL                   | Controls the toggle animation direction        | NO       | Boolean   | false     |
+| containerMargin         | The value used to determine the width          | NO       | Number    | 16        |
+| activeTextStyle         | active text styles                             | NO       | TextStyle | {}        |
+| inactiveTextStyle       | inactive text styles.                          | NO       | TextStyle | {}        |
+| segmentedControlWrapper | Style object for the Segmented Control.        | NO       | ViewStyle | {}        |
+| pressableWrapper        | Style object for the Pressable Container       | NO       | ViewStyle | {}        |
+| tileStyle               | Style object for the Absolute positioned tile  | NO       | ViewStyle | {}        |
+| activeBadgeStyle        | Active Badge Style                             | NO       | ViewStyle | {}        |
+| inactiveBadgeStyle      | Inactive Badge Style                           | NO       | ViewStyle | {}        |
+| badgeTextStyle          | Badge text styles                              | NO       | TextStyle | {}        |
+| renderTile              | Render a custom tile component                 | NO       | Function  | undefined |
 
 > :warning: all View styles or Text Styles passed as props overrides some default styles provided by the package. Make sure you use it properly :)
 
 > :information_source: To apply your own `shadowStyles` use the tileStyle prop
+
+> :information_source: `renderTile` takes a function with `style`, `transform` and `width`. You can use these to style your custom tile to look the same as the default style (e.g. if you just wanted to change the animation)
 
 ## :mag: Usage
 
