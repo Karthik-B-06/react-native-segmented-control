@@ -127,6 +127,14 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   const translateValue = width / segments.length;
   const tabTranslateValue = useSharedValue(0);
 
+  // Transform and memoize all segments into a `Segment` array.
+  // This allows for the segments to be transformed only when they change, and to be treated as `Segment` on render.
+  const memoizedSegments = React.useMemo<Segment[]>(() => {
+    return segments.map((segment) =>
+      typeof segment === 'string' ? { label: segment } : segment
+    );
+  }, [segments]);
+
   // useCallBack with an empty array as input, which will call inner lambda only once and memoize the reference for future calls
   const memoizedTabPressCallback = React.useCallback(
     (index) => {
