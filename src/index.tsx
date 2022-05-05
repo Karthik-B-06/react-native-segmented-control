@@ -213,12 +213,21 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
           tabTranslateAnimatedStyles,
         ]}
       />
-      {segments.map((segment, index) => {
+      {memoizedSegments.map((segment, index) => {
+        const isSelected = currentIndex === index;
+        const { label, ...accessibilityProps } = segment;
+
         return (
           <Pressable
             onPress={() => memoizedTabPressCallback(index)}
             key={index}
             style={[styles.touchableContainer, pressableWrapper]}
+            accessibilityState={{ selected: isSelected }}
+            accessibilityHint={!isSelected ? `Selects ${label} option` : ''}
+            accessibilityLabel={`${label}, option, ${index + 1} of ${
+              segments.length
+            }`}
+            accessibilityRole="button"
           >
             <View style={styles.textWrapper}>
               <Text
@@ -228,7 +237,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
                     : finalisedInActiveTextStyle,
                 ]}
               >
-                {segment}
+                {label}
               </Text>
               {badgeValues[index] && (
                 <View
