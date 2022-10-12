@@ -18,7 +18,7 @@ interface SegmentedControlProps {
   /**
    * The Segments Text Array
    */
-  segments: Array<React.ReactElement | string>;
+  segments: Array<string>;
   /**
    * The Current Active Segment Index
    */
@@ -276,7 +276,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
             <SegmentComponent
               selected={index === currentIndex}
               badgeValue={badgeValues[index]}
-              segment={typeof segment === 'string' ? segment : null} // so we dont pass the componet to itself
+              segment={segment}
               {...rest}
             />
           </Pressable>
