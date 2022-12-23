@@ -72,6 +72,10 @@ interface SegmentedControlProps {
    * Badge Text Styles
    */
   badgeTextStyle?: TextStyle;
+  /**
+   * Base Test ID of component to be used for testing
+   */
+  testIDPrefix?: string
 }
 
 const defaultShadowStyle = {
@@ -95,6 +99,8 @@ const DEFAULT_SPRING_CONFIG = {
   restDisplacementThreshold: 0.001,
 };
 
+const DEFAULT_TEST_PREFIX = 'segmented-control';
+
 const SegmentedControl: React.FC<SegmentedControlProps> = ({
   segments,
   currentIndex,
@@ -110,6 +116,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
   activeBadgeStyle,
   inactiveBadgeStyle,
   badgeTextStyle,
+  testIDPrefix = DEFAULT_TEST_PREFIX,
 }: SegmentedControlProps) => {
   const width = widthPercentageToDP('100%') - containerMargin * 2;
   const translateValue = width / segments.length;
@@ -179,9 +186,11 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
 
   return (
     <Animated.View
+      testID={`${testIDPrefix}-container`}
       style={[styles.defaultSegmentedControlWrapper, segmentedControlWrapper]}
     >
       <Animated.View
+        testID={`${testIDPrefix}-tile`}
         style={[
           styles.movingSegmentStyle,
           defaultShadowStyle,
@@ -196,12 +205,14 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
       {segments.map((segment, index) => {
         return (
           <Pressable
+            testID={`${testIDPrefix}-segment-${index}`}
             onPress={() => memoizedTabPressCallback(index)}
             key={index}
             style={[styles.touchableContainer, pressableWrapper]}
           >
             <View style={styles.textWrapper}>
               <Text
+                testID={`${testIDPrefix}-segment-${index}-text`}
                 style={[
                   currentIndex === index
                     ? finalisedActiveTextStyle
@@ -212,6 +223,7 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
               </Text>
               {badgeValues[index] && (
                 <View
+                  testID={`${testIDPrefix}-segment-${index}-badge`}
                   style={[
                     styles.defaultBadgeContainerStyle,
                     currentIndex === index
