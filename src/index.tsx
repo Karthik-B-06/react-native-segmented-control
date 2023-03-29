@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import {
   Pressable,
   StyleSheet,
@@ -122,13 +122,18 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     },
     [onChange]
   );
+  const mounted = useRef(true);
   useEffect(() => {
     // If phone is set to RTL, make sure the animation does the correct transition.
     const transitionMultiplier = isRTL ? -1 : 1;
-    tabTranslateValue.value = withSpring(
-      currentIndex * (translateValue * transitionMultiplier),
-      DEFAULT_SPRING_CONFIG
-    );
+    let value = currentIndex * (translateValue * transitionMultiplier);
+    if (mounted.current === true) {
+      // Ignore withSpring on initial mount
+      mounted.current = false;
+    } else {
+      value = withSpring(value, DEFAULT_SPRING_CONFIG);
+    }
+    tabTranslateValue.value = value;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
