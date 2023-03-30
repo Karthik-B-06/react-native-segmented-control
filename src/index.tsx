@@ -113,7 +113,9 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
 }: SegmentedControlProps) => {
   const width = widthPercentageToDP('100%') - containerMargin * 2;
   const translateValue = width / segments.length;
-  const tabTranslateValue = useSharedValue(0);
+  const tabTranslateValue = useSharedValue(currentIndex);
+  // If phone is set to RTL, make sure the animation does the correct transition.
+  const transitionMultiplier = isRTL ? -1 : 1;
 
   // useCallBack with an empty array as input, which will call inner lambda only once and memoize the reference for future calls
   const memoizedTabPressCallback = React.useCallback(
@@ -123,20 +125,19 @@ const SegmentedControl: React.FC<SegmentedControlProps> = ({
     [onChange]
   );
   useEffect(() => {
-    // If phone is set to RTL, make sure the animation does the correct transition.
-    const transitionMultiplier = isRTL ? -1 : 1;
-    tabTranslateValue.value = withSpring(
-      currentIndex * (translateValue * transitionMultiplier),
-      DEFAULT_SPRING_CONFIG
-    );
+    tabTranslateValue.value = currentIndex;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentIndex]);
 
   const tabTranslateAnimatedStyles = useAnimatedStyle(() => {
+    const translateX = withSpring(
+      tabTranslateValue.value * (translateValue * transitionMultiplier),
+      DEFAULT_SPRING_CONFIG
+    );
     return {
-      transform: [{ translateX: tabTranslateValue.value }],
+      transform: [{ translateX }],
     };
-  });
+  }, [translateValue, transitionMultiplier]);
 
   const finalisedActiveTextStyle: TextStyle = {
     fontSize: 15,
